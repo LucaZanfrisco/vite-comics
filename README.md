@@ -1,4 +1,4 @@
-# Vue
+# Vite Comics
 
 Progetto che ha l'obiettivo di replicare la struttura di una pagina web , attraverso l'uso di Vite + Vue e il Sass
 
