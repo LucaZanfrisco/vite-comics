@@ -63,6 +63,12 @@ export default {
         align-items: center;
         li{
             padding: .625rem;
+            &:hover{
+                cursor: pointer;
+                background-color: white;
+                border-radius: .625rem;
+                scale: 75%;
+            }
         }
         .follow{
             color: $primary-color;
