@@ -1,6 +1,32 @@
 <script>
 export default {
     name: 'AppFooterNav',
+    data(){
+        return{
+            listTopFooter: [
+                {
+                  image: 'src/assets/img/buy-comics-digital-comics.png',
+                  name: 'DIGITAL COMICS'
+                },
+                {
+                    image: 'src/assets/img//buy-comics-merchandise.png',
+                    name: 'DC MERCHANDISE'
+                },
+                {
+                    image: 'src/assets/img/buy-comics-subscriptions.png',
+                    name: 'SUBSCRIPTION'
+                },
+                {
+                    image:'src/assets/img/buy-comics-shop-locator.png',
+                    name: 'COMIC SHOP LOCATOR'
+                },
+                {
+                    image: 'src/assets/img/buy-dc-power-visa.svg',
+                    name: 'DC POWER VISA'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -9,25 +35,9 @@ export default {
     <div>
         <!-- Lista Nav Bar della parte superiore del footer -->
         <ul>
-            <li>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="digital-comics">
-                <span>DIGITAL COMICS</span>
-            </li>
-            <li>
-                <img src="../assets/img//buy-comics-merchandise.png" alt="dc-merch"> 
-                <span>DC MERCHANDISE</span>
-            </li>
-            <li>
-                <img src="../assets/img/buy-comics-subscriptions.png" alt="subs">
-                <span>SUBSCRIPTION</span>
-            </li>
-            <li>
-                <img src="../assets/img/buy-comics-shop-locator.png" alt="shop-locator">
-                <span>COMIC SHOP LOCATOR</span>
-            </li>
-            <li>
-                <img src="../assets/img/buy-dc-power-visa.svg" alt="power-visa">
-                <span>DC POWER VISA</span>
+            <li v-for="list in listTopFooter">
+                <img :src="list.image" :alt="list.name">
+                <span>{{ list.name }}</span>
             </li>
         </ul>
         <!-- /Lista Nav Bar della parte superiore del footer -->

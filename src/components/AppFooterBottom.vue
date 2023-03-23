@@ -1,6 +1,32 @@
 <script>
 export default {
-    name: 'AppFooterBottom'
+    name: 'AppFooterBottom',
+    data(){
+        return{
+            socialList: [
+                {
+                    image: 'src/assets/img/footer-facebook.png',
+                    name: 'button-facebook'
+                },
+                {
+                    image: 'src/assets/img/footer-twitter.png',
+                    name: 'button-twitter'
+                },
+                {
+                    image: 'src/assets/img/footer-youtube.png',
+                    name: 'button-youtube'
+                },
+                {
+                    image: 'src/assets/img/footer-pinterest.png',
+                    name: 'button-pinterest'
+                },
+                {
+                    image: 'src/assets/img/footer-periscope.png',
+                    name: 'button-periscope'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -15,20 +41,8 @@ export default {
         <div>
             <ul>
                 <li class="follow">FOLLOW US</li>
-                <li>
-                    <img src="../assets/img/footer-facebook.png" alt="button-facebook">
-                </li>
-                <li>
-                    <img src="../assets/img/footer-twitter.png" alt="button-twitter">
-                </li>
-                <li>
-                    <img src="../assets/img/footer-youtube.png" alt="button-youtube">
-                </li>
-                <li>
-                    <img src="../assets/img/footer-pinterest.png" alt="button-pinterest">
-                </li>
-                <li>
-                    <img src="../assets/img/footer-periscope.png" alt="button-periscope">
+                <li v-for="social in socialList">
+                    <img :src="social.image" :alt="social.name">
                 </li>
             </ul>
         </div>
