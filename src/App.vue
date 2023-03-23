@@ -12,10 +12,18 @@
 </script>
 
 <template>
-  <AppHeader></AppHeader>
-  <AppMain></AppMain>
-  <AppFooter></AppFooter>
+    <!-- Componente Header -->
+    <AppHeader></AppHeader>
+    <!-- Componente Main -->
+    <AppMain></AppMain>
+    <!-- Componente Main -->
+    <AppFooter></AppFooter>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@use "./style/variables.scss" as *;
+li{
+    list-style: none;
+}
+
 </style>

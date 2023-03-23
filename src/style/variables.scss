@@ -1,2 +1,8 @@
 $primary-color: #0282f9;
 $secondary-color: #303030;
+$text-color: #959595;
+
+@mixin container {
+    max-width: 81.25rem;
+    margin: 0 auto;
+}
