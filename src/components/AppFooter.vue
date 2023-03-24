@@ -97,8 +97,8 @@ import AppFooterBottom from './AppFooterBottom.vue';
             .container-info{
                 display: flex;
                 ul{
-                    margin-right: 1.6875rem;
-                    margin-bottom: 1.75rem;
+                    margin-right: 17px;
+                    margin-bottom: 15px;
                     li{
                         font-size: 14px;
                         padding: .125rem;

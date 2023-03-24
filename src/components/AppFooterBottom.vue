@@ -79,9 +79,8 @@ export default {
             padding: .625rem;
             &:hover{
                 cursor: pointer;
-                background-color: white;
+                border: 1px solid whitesmoke;
                 border-radius: .625rem;
-                scale: 75%;
             }
         }
         .follow{

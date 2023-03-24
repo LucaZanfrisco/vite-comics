@@ -63,7 +63,6 @@ div{
             color: white;
             img{
                 max-width: 3.4375rem;
-                max-height: 3.4375rem;
                 margin-right: .9375rem;
             }
         }
