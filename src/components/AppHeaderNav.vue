@@ -3,7 +3,59 @@ export default {
     name: 'AppHeaderNav',
     data(){
         return{
-            navList: ['CHARACTERS','COMICS','MOVIES','TV','GAMES','COLLECTIBLES','VIDEOS','FANS','NEWS','SHOP']
+            navList: [
+                {
+                    name: 'CHARACTERS',
+                    active: true
+                },
+                {
+                    name: 'COMICS',
+                    active: false
+                },
+                {
+                    name: 'MOVIES',
+                    active: false
+                },
+                {
+                    name: 'TV',
+                    active: false
+                },
+                {
+                    name: 'GAMES',
+                    active: false
+                },
+                {
+                    name: 'COLLECTIBLES',
+                    active: false
+                },
+                {
+                    name: 'VIDEOS',
+                    active: false
+                },
+                {
+                    name: 'FANS',
+                    active: false
+                },
+                {
+                    name: 'NEWS',
+                    active: false
+                },
+                {
+                    name: 'SHOP',
+                    active: false
+                }
+            ]
+        }
+    },
+    methods:{
+        isActive(index){
+            this.navList.forEach((element,i) => {
+                if(index === i){
+                    element.active = true;
+                }else{
+                    element.active = false;
+                }
+            })
         }
     }
 }
@@ -13,7 +65,7 @@ export default {
     <!-- Nav Bar -->
     <nav>
         <ul>
-            <li v-for="nav in navList">{{ nav }}</li>
+            <li v-for="(nav,index) in navList" @click="isActive(index)" :class="{active: nav.active}">{{ nav.name }}</li>
         </ul>
     </nav>
     <!-- /Nav Bar -->
@@ -35,9 +87,12 @@ nav{
             &:hover{
                 cursor: pointer;
                 color: $primary-color;
-                border-bottom: 3px solid $primary-color;
             }
         }
+    }
+    .active{
+        color: $primary-color;
+        border-bottom: 5px solid $primary-color;
     }
 }
 </style>

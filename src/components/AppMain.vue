@@ -122,7 +122,7 @@ main {
             padding: 1.0625rem 1.875rem;
             font-size: 1.4rem;
             position: relative;
-            bottom: 1.6875rem
+            bottom: 1.6875rem;
         }
         .products {
             display: flex;
@@ -134,6 +134,12 @@ main {
                 margin: 10px;
                 :deep(.title) {
                     margin-top: 1.375rem;
+                    padding: 5px;
+                }
+                &:hover{
+                    cursor: pointer;
+                    scale: 1.05;
+                    box-shadow: 2px .3125rem 1.5625rem lightgray inset;
                 }
             }
         }
